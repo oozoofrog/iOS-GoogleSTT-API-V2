@@ -2,8 +2,8 @@
 //  GoogleSTT.h
 //  CoreAudioExp
 //
-//  Created by eyemac on 2014. 5. 8..
-//  Copyright (c) 2014년 onsetel. All rights reserved.
+//  Created by DevLife1978 on 2014. 5. 8..
+//  Copyleft for everyone.
 //
 
 #import <Foundation/Foundation.h>

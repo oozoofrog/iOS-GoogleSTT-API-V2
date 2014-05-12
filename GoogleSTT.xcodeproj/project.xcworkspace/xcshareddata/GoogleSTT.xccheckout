@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4D335A33-5A35-4152-8607-096270A1AB55</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GoogleSTT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>28CD2827-A665-4139-A676-EC06DD7A02B9</key>
+		<string>https://github.com/jhurt/FLACiOS.git</string>
+		<key>7CC49849-CF59-488C-A902-9D1E3D04FA41</key>
+		<string>https://github.com/DevLife1978/GoogleSTT-API-V2-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GoogleSTT.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>28CD2827-A665-4139-A676-EC06DD7A02B9</key>
+		<string>../../../FlaciOS</string>
+		<key>7CC49849-CF59-488C-A902-9D1E3D04FA41</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DevLife1978/GoogleSTT-API-V2-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7CC49849-CF59-488C-A902-9D1E3D04FA41</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>28CD2827-A665-4139-A676-EC06DD7A02B9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlaciOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CC49849-CF59-488C-A902-9D1E3D04FA41</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoogleSTT(API V2)</string>
+		</dict>
+	</array>
+</dict>
+</plist>

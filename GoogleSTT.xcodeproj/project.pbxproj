@@ -375,6 +375,7 @@
 		05C1E6B91921162C00323E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/GoogleSTT.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
@@ -387,6 +388,7 @@
 		05C1E6BA1921162C00323E00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/GoogleSTT.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
@@ -451,6 +453,7 @@
 				05C1E6BA1921162C00323E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05C1E6BB1921162C00323E00 /* Build configuration list for PBXNativeTarget "GoogleSTTTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +462,7 @@
 				05C1E6BD1921162C00323E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

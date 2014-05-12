@@ -2,12 +2,11 @@
 //  GoogleSTT.m
 //  CoreAudioExp
 //
-//  Created by eyemac on 2014. 5. 8..
-//  Copyright (c) 2014년 onsetel. All rights reserved.
+//  Created by DevLife1978 on 2014. 5. 8..
+//  Copyleft for everyone.
 //
 
 #import "GoogleSTT.h"
-#import "Constants.h"
 #import <FLACiOS/all.h>
 
 #define SAMPLE_RATE 44100
@@ -159,7 +158,7 @@ void propListener( void                     *inClientData,
 	if (inID == kAudioSessionProperty_AudioRouteChange)
 	{
 		CFDictionaryRef routeDictionary = (CFDictionaryRef)inData;
-
+        
 		CFNumberRef reason = (CFNumberRef)CFDictionaryGetValue(routeDictionary, CFSTR(kAudioSession_AudioRouteChangeKey_Reason));
 		SInt32 reasonVal;
 		CFNumberGetValue(reason, kCFNumberSInt32Type, &reasonVal);
@@ -190,11 +189,11 @@ void propListener( void                     *inClientData,
 }
 
 FLAC__StreamEncoderWriteStatus FlacWriteCallback(const FLAC__StreamEncoder *encoder,
-                                                const FLAC__byte buffer[],
-                                                size_t bytes,
-                                                unsigned samples,
-                                                unsigned current_frame,
-                                                void *client_data)
+                                                 const FLAC__byte buffer[],
+                                                 size_t bytes,
+                                                 unsigned samples,
+                                                 unsigned current_frame,
+                                                 void *client_data)
 {
     STTRecorder *recorder = (STTRecorder *)client_data;
     [recorder->flacData appendBytes:buffer
@@ -206,28 +205,20 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
 {
     OSStatus error = noErr;
     recordFormat->mFormatID = kAudioFormatLinearPCM;
-
+    
     // get sample rate of current device
-    if (7.0 <= [[UIDevice currentDevice].systemVersion floatValue]) {
-        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-        recordFormat->mSampleRate = SAMPLE_RATE;
-        recordFormat->mChannelsPerFrame = audioSession.inputNumberOfChannels;
-    }
-    else
-    {
-        UInt32 size = sizeof(recordFormat->mSampleRate);
-        CheckError(AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareSampleRate,
-                                           &size,
-                                           &recordFormat->mSampleRate),
-                   "Couldn't get default hardware samplerate");
-        
-        // get channel per frame of current device
-        size = sizeof(recordFormat->mChannelsPerFrame);
-        CheckError(AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareInputNumberChannels,
-                                           &size,
-                                           &recordFormat->mChannelsPerFrame),
-                   "Couldn't get default input number of channels");
-    }
+    UInt32 size = sizeof(recordFormat->mSampleRate);
+    CheckError(AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareSampleRate,
+                                       &size,
+                                       &recordFormat->mSampleRate),
+               "Couldn't get default hardware samplerate");
+    
+    // get channel per frame of current device
+    size = sizeof(recordFormat->mChannelsPerFrame);
+    CheckError(AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareInputNumberChannels,
+                                       &size,
+                                       &recordFormat->mChannelsPerFrame),
+               "Couldn't get default input number of channels");
     
     if (kAudioFormatLinearPCM == recordFormat->mFormatID) {
         recordFormat->mFormatFlags = kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked;
@@ -254,14 +245,14 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
         Byte *magicCookie = (Byte *)malloc(propertySize);
         
         CheckError(AudioQueueGetProperty(_queue,
-                                      kAudioQueueProperty_MagicCookie,
-                                      &magicCookie,
-                                      &propertySize), "Couldn't get magic cookie");
+                                         kAudioQueueProperty_MagicCookie,
+                                         &magicCookie,
+                                         &propertySize), "Couldn't get magic cookie");
         
         CheckError(AudioFileSetProperty(_recorderData.recordFile,
-                                     kAudioFilePropertyMagicCookieData,
-                                     propertySize,
-                                     magicCookie), "Couldn't set magic cookie to file");
+                                        kAudioFilePropertyMagicCookieData,
+                                        propertySize,
+                                        magicCookie), "Couldn't set magic cookie to file");
         
         free(magicCookie);
         
@@ -381,7 +372,7 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
     CheckError(AudioSessionGetProperty(kAudioSessionProperty_AudioInputAvailable,
                                        &inputAvailableSize,
                                        &inputAvailable), "Audio Input Available Check failed");
- 
+    
     if (0 == inputAvailable) {
         _audioInputAvailable = NO;
     }
@@ -394,7 +385,7 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
                                                propListener,
                                                &_recorderData),
                "Add Audio Input Available Check Listener failed");
-  
+    
     CheckError(AudioSessionSetActive(TRUE), "AudioSessionSetActive failed");
     
     if (_audioInputAvailable) {
@@ -409,14 +400,14 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
     memset(&_recorderData, 0, sizeof(STTRecorder));
     
     memset(&_recordFormat, 0, sizeof(AudioStreamBasicDescription));
-
+    
     _recorderData.stt = self;
     
     _recorderData.flacData = [[NSMutableData alloc] init];
     
     // Set up format
     SetupRecordFormat(&_recordFormat);
-
+    
     UInt32 propSize = sizeof(AudioStreamBasicDescription);
     CheckError(AudioFormatGetProperty(kAudioFormatProperty_FormatInfo,
                                       0,
@@ -477,10 +468,10 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
     NSLog(@"Recording started~");
     
     self.meterTimer = [NSTimer scheduledTimerWithTimeInterval:0.05
-                                              target:self
-                                            selector:@selector(checkMeter)
-                                            userInfo:nil
-                                             repeats:YES];
+                                                       target:self
+                                                     selector:@selector(checkMeter)
+                                                     userInfo:nil
+                                                      repeats:YES];
 }
 
 - (void)stopRecording
@@ -561,8 +552,8 @@ OSStatus SetupRecordFormat(AudioStreamBasicDescription *recordFormat)
                                }
                                
                                NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]
-                                                                            options:NSJSONReadingAllowFragments
-                                                                              error:nil];
+                                                                                      options:NSJSONReadingAllowFragments
+                                                                                        error:nil];
                                NSMutableArray *translates = nil;
                                if (result) {
                                    NSArray *results = result[@"result"];

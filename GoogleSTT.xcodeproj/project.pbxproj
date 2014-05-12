@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C1E6991921162C00323E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6981921162C00323E00 /* Foundation.framework */; };
+		05C1E6A71921162C00323E00 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6A61921162C00323E00 /* XCTest.framework */; };
+		05C1E6A81921162C00323E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6981921162C00323E00 /* Foundation.framework */; };
+		05C1E6AA1921162C00323E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6A91921162C00323E00 /* UIKit.framework */; };
+		05C1E6AD1921162C00323E00 /* libGoogleSTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6951921162C00323E00 /* libGoogleSTT.a */; };
+		05C1E6B31921162C00323E00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05C1E6B11921162C00323E00 /* InfoPlist.strings */; };
+		05C1E6B51921162C00323E00 /* GoogleSTTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1E6B41921162C00323E00 /* GoogleSTTTests.m */; };
+		05C1E6C71921165500323E00 /* libFLACiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C1E6C41921164400323E00 /* libFLACiOS.a */; };
+		05C1E71F1921174600323E00 /* GoogleSTT.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1E71E1921174600323E00 /* GoogleSTT.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05C1E6AB1921162C00323E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C1E68D1921162C00323E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05C1E6941921162C00323E00;
+			remoteInfo = GoogleSTT;
+		};
+		05C1E6C31921164400323E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C1E6BE1921164400323E00 /* FLACiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FE271E0015C706CB00B29E74;
+			remoteInfo = FLACiOS;
+		};
+		05C1E6C51921164B00323E00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C1E6BE1921164400323E00 /* FLACiOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FE271DFF15C706CB00B29E74;
+			remoteInfo = FLACiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05C1E6931921162C00323E00 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05C1E6951921162C00323E00 /* libGoogleSTT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleSTT.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C1E6981921162C00323E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		05C1E69C1921162C00323E00 /* GoogleSTT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleSTT-Prefix.pch"; sourceTree = "<group>"; };
+		05C1E6A51921162C00323E00 /* GoogleSTTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleSTTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C1E6A61921162C00323E00 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		05C1E6A91921162C00323E00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		05C1E6B01921162C00323E00 /* GoogleSTTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleSTTTests-Info.plist"; sourceTree = "<group>"; };
+		05C1E6B21921162C00323E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05C1E6B41921162C00323E00 /* GoogleSTTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleSTTTests.m; sourceTree = "<group>"; };
+		05C1E6BE1921164400323E00 /* FLACiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FLACiOS.xcodeproj; path = ../FlaciOS/FLACiOS.xcodeproj; sourceTree = "<group>"; };
+		05C1E71D1921174600323E00 /* GoogleSTT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSTT.h; sourceTree = "<group>"; };
+		05C1E71E1921174600323E00 /* GoogleSTT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSTT.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05C1E6921921162C00323E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C1E6C71921165500323E00 /* libFLACiOS.a in Frameworks */,
+				05C1E6991921162C00323E00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C1E6A21921162C00323E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C1E6AD1921162C00323E00 /* libGoogleSTT.a in Frameworks */,
+				05C1E6A71921162C00323E00 /* XCTest.framework in Frameworks */,
+				05C1E6AA1921162C00323E00 /* UIKit.framework in Frameworks */,
+				05C1E6A81921162C00323E00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05C1E68C1921162C00323E00 = {
+			isa = PBXGroup;
+			children = (
+				05C1E6BE1921164400323E00 /* FLACiOS.xcodeproj */,
+				05C1E69A1921162C00323E00 /* GoogleSTT */,
+				05C1E6AE1921162C00323E00 /* GoogleSTTTests */,
+				05C1E6971921162C00323E00 /* Frameworks */,
+				05C1E6961921162C00323E00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05C1E6961921162C00323E00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E6951921162C00323E00 /* libGoogleSTT.a */,
+				05C1E6A51921162C00323E00 /* GoogleSTTTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05C1E6971921162C00323E00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E6981921162C00323E00 /* Foundation.framework */,
+				05C1E6A61921162C00323E00 /* XCTest.framework */,
+				05C1E6A91921162C00323E00 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05C1E69A1921162C00323E00 /* GoogleSTT */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E71D1921174600323E00 /* GoogleSTT.h */,
+				05C1E71E1921174600323E00 /* GoogleSTT.m */,
+				05C1E69B1921162C00323E00 /* Supporting Files */,
+			);
+			path = GoogleSTT;
+			sourceTree = "<group>";
+		};
+		05C1E69B1921162C00323E00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E69C1921162C00323E00 /* GoogleSTT-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05C1E6AE1921162C00323E00 /* GoogleSTTTests */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E6B41921162C00323E00 /* GoogleSTTTests.m */,
+				05C1E6AF1921162C00323E00 /* Supporting Files */,
+			);
+			path = GoogleSTTTests;
+			sourceTree = "<group>";
+		};
+		05C1E6AF1921162C00323E00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E6B01921162C00323E00 /* GoogleSTTTests-Info.plist */,
+				05C1E6B11921162C00323E00 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05C1E6BF1921164400323E00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05C1E6C41921164400323E00 /* libFLACiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05C1E6941921162C00323E00 /* GoogleSTT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C1E6B81921162C00323E00 /* Build configuration list for PBXNativeTarget "GoogleSTT" */;
+			buildPhases = (
+				05C1E6911921162C00323E00 /* Sources */,
+				05C1E6921921162C00323E00 /* Frameworks */,
+				05C1E6931921162C00323E00 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05C1E6C61921164B00323E00 /* PBXTargetDependency */,
+			);
+			name = GoogleSTT;
+			productName = GoogleSTT;
+			productReference = 05C1E6951921162C00323E00 /* libGoogleSTT.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		05C1E6A41921162C00323E00 /* GoogleSTTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C1E6BB1921162C00323E00 /* Build configuration list for PBXNativeTarget "GoogleSTTTests" */;
+			buildPhases = (
+				05C1E6A11921162C00323E00 /* Sources */,
+				05C1E6A21921162C00323E00 /* Frameworks */,
+				05C1E6A31921162C00323E00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05C1E6AC1921162C00323E00 /* PBXTargetDependency */,
+			);
+			name = GoogleSTTTests;
+			productName = GoogleSTTTests;
+			productReference = 05C1E6A51921162C00323E00 /* GoogleSTTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05C1E68D1921162C00323E00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Accidently;
+			};
+			buildConfigurationList = 05C1E6901921162C00323E00 /* Build configuration list for PBXProject "GoogleSTT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05C1E68C1921162C00323E00;
+			productRefGroup = 05C1E6961921162C00323E00 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 05C1E6BF1921164400323E00 /* Products */;
+					ProjectRef = 05C1E6BE1921164400323E00 /* FLACiOS.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				05C1E6941921162C00323E00 /* GoogleSTT */,
+				05C1E6A41921162C00323E00 /* GoogleSTTTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		05C1E6C41921164400323E00 /* libFLACiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFLACiOS.a;
+			remoteRef = 05C1E6C31921164400323E00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05C1E6A31921162C00323E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C1E6B31921162C00323E00 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05C1E6911921162C00323E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C1E71F1921174600323E00 /* GoogleSTT.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C1E6A11921162C00323E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C1E6B51921162C00323E00 /* GoogleSTTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05C1E6AC1921162C00323E00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05C1E6941921162C00323E00 /* GoogleSTT */;
+			targetProxy = 05C1E6AB1921162C00323E00 /* PBXContainerItemProxy */;
+		};
+		05C1E6C61921164B00323E00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLACiOS;
+			targetProxy = 05C1E6C51921164B00323E00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05C1E6B11921162C00323E00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05C1E6B21921162C00323E00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05C1E6B61921162C00323E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05C1E6B71921162C00323E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05C1E6B91921162C00323E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GoogleSTT.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		05C1E6BA1921162C00323E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GoogleSTT.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05C1E6BC1921162C00323E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GoogleSTTTests/GoogleSTTTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		05C1E6BD1921162C00323E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoogleSTT/GoogleSTT-Prefix.pch";
+				INFOPLIST_FILE = "GoogleSTTTests/GoogleSTTTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05C1E6901921162C00323E00 /* Build configuration list for PBXProject "GoogleSTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C1E6B61921162C00323E00 /* Debug */,
+				05C1E6B71921162C00323E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05C1E6B81921162C00323E00 /* Build configuration list for PBXNativeTarget "GoogleSTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C1E6B91921162C00323E00 /* Debug */,
+				05C1E6BA1921162C00323E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05C1E6BB1921162C00323E00 /* Build configuration list for PBXNativeTarget "GoogleSTTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C1E6BC1921162C00323E00 /* Debug */,
+				05C1E6BD1921162C00323E00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05C1E68D1921162C00323E00 /* Project object */;
+}
